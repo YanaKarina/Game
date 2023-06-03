@@ -1,0 +1,56 @@
+object RulesScreen: TRulesScreen
+  Left = 497
+  Height = 450
+  Top = 167
+  Width = 800
+  BorderStyle = bsSingle
+  Caption = 'Экран правил'
+  ClientHeight = 450
+  ClientWidth = 800
+  Color = 16247219
+  DesignTimePPI = 120
+  Position = poDesktopCenter
+  LCLVersion = '2.2.4.0'
+  object Title: TLabel
+    Left = 282
+    Height = 32
+    Top = 40
+    Width = 242
+    Caption = 'Основные правила'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -28
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object BackButton: TButton
+    Left = 305
+    Height = 69
+    Top = 350
+    Width = 190
+    Caption = 'Назад'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -24
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = BackButtonClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Rules: TStaticText
+    Left = 85
+    Height = 195
+    Top = 128
+    Width = 630
+    Caption = '1. Игрок должен удержать мячик в игре, при помощи ракеток, каждый игрок после одного отскока мяча на своей половине стола должен отправить мячик на половину стола соперника.'#13#10'2. Очки начисляются игроку, если соперник не может вернуть мяч в соответствии с правилами.'#13#10'3.Выигрывает игрок, который набирает 5 очков. Проигрывает игрок, если набирает наименьшее количество очков.'#13#10'4. Управление в игре осуществляется при помощи компьютерной мышки.'
+    Color = clWhite
+    ParentColor = False
+    TabOrder = 1
+    Transparent = False
+  end
+end

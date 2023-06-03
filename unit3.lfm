@@ -1,0 +1,90 @@
+object GameScreen: TGameScreen
+  Left = 779
+  Height = 450
+  Top = 253
+  Width = 800
+  BorderStyle = bsSingle
+  Caption = 'Игровой экран'
+  ClientHeight = 450
+  ClientWidth = 800
+  DesignTimePPI = 120
+  OnCreate = ResetForm
+  OnHide = ResetForm
+  OnMouseMove = FormMouseMove
+  OnShow = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '2.2.4.0'
+  object Ball: TShape
+    Left = 376
+    Height = 48
+    Top = 201
+    Width = 48
+    DragCursor = crDefault
+    Enabled = False
+    Shape = stCircle
+  end
+  object UserRacket: TShape
+    Left = 761
+    Height = 125
+    Top = 45
+    Width = 32
+    Brush.Color = clMenuText
+    DragCursor = crDefault
+    Enabled = False
+  end
+  object CompRacket: TShape
+    Left = 5
+    Height = 122
+    Top = 45
+    Width = 32
+    Brush.Color = clBackground
+    DragCursor = crDefault
+    Enabled = False
+  end
+  object CompScoreText: TStaticText
+    Left = 5
+    Height = 21
+    Top = 5
+    Width = 200
+    Caption = 'Счет компьютера: 0'
+    Enabled = False
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -20
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object UserScoreText: TStaticText
+    Left = 656
+    Height = 21
+    Top = 5
+    Width = 142
+    Caption = 'Счет игрока: 0'
+    Enabled = False
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -20
+    Font.Name = 'Times New Roman'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 10
+    OnTimer = Timer1Timer
+    Left = 211
+    Top = 179
+  end
+  object Timer2: TTimer
+    Enabled = False
+    Interval = 16
+    OnTimer = Timer2Timer
+    Left = 211
+    Top = 249
+  end
+end
